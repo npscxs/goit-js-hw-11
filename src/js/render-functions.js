@@ -21,9 +21,9 @@ export const renderImages = images => {
   const imageElements = images
     .map(image => {
       return `  
-            <a href="${image.largeImageURL}" class="gallery__item">  
-                <img src="${image.webformatURL}" alt="${image.tags}" class="gallery__image" />  
-                <div class="gallery__info">  
+            <a href="${image.largeImageURL}" class="gallery-item">  
+                <img src="${image.webformatURL}" alt="${image.tags}" class="gallery-image" />  
+                <div class="gallery-info">  
                     <div class="gallery-info-item">
                     <p class="info-item-title">Likes</p>
                     <p>${image.likes}</p>
@@ -47,6 +47,6 @@ export const renderImages = images => {
 
   gallery.innerHTML = imageElements;
 
-  lightbox = new SimpleLightbox('.gallery__item', {});
+  lightbox = new SimpleLightbox('.gallery-item', {});
   lightbox.refresh();
 };
